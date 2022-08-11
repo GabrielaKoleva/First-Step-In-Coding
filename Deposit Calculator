@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class depositCalculator_03 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        double depositAmount = Double.parseDouble(scan.nextLine());
+        int yearsOfDeposit = Integer.parseInt(scan.nextLine());
+        double percent = Double.parseDouble(scan.nextLine());
+
+        double allAmount = depositAmount + yearsOfDeposit *
+                ((depositAmount * (percent/100))/12);
+
+        System.out.println(allAmount);
+    }
+}
