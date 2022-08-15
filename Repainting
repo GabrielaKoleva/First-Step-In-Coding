@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+      int nailon = Integer.parseInt(scan.nextLine());
+      int paint = Integer.parseInt(scan.nextLine());
+      int razreditel = Integer.parseInt(scan.nextLine());
+      int hours = Integer.parseInt(scan.nextLine());
+
+      double morePaint = 0.1 * paint;
+      double sum = ((nailon + 2) * 1.5)+(paint + morePaint) * 14.5+(razreditel * 5.0)+0.4;
+      double workPrice = (sum * 0.3) * hours;
+      double priceForEverything = sum + workPrice;
+
+        System.out.println(priceForEverything);
+
+    }
+}
