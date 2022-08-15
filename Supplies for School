@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class suppliesForSchool_05 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        int pen = Integer.parseInt(scan.nextLine());
+        int marker = Integer.parseInt(scan.nextLine());
+        int cleaner = Integer.parseInt(scan.nextLine());
+        double discount = Double.parseDouble(scan.nextLine());
+
+        double priceForAll = (5.8 * pen) + (7.2 * marker) + (1.2 * cleaner);
+        double percentDiscount = discount / 100;
+
+        double price = priceForAll - (priceForAll * percentDiscount);
+
+        System.out.println(price);
+    }
+}
