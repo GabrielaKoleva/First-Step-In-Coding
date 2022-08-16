@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class basketballEquipment_08 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        int yearTacks = Integer.parseInt(scan.nextLine());
+
+        double priceForShoes = (yearTacks*1.0) - (0.4 * yearTacks);
+        double priceForOutfit = priceForShoes - (priceForShoes * 0.2);
+        double priceForBall = 0.25 * priceForOutfit;
+        double priceForAccessories = 0.2 * priceForBall;
+
+        double finalPrice = yearTacks + priceForShoes + priceForOutfit +
+                priceForBall + priceForAccessories;
+
+        System.out.println(finalPrice);
+    }
+}
