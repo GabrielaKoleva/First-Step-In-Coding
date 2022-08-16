@@ -1,21 +1,25 @@
 import java.util.Scanner;
 
-public class main {
-
+public class repainting_06 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-      int nailon = Integer.parseInt(scan.nextLine());
-      int paint = Integer.parseInt(scan.nextLine());
-      int razreditel = Integer.parseInt(scan.nextLine());
-      int hours = Integer.parseInt(scan.nextLine());
+        int nylon = Integer.parseInt(scan.nextLine());
+        int paint = Integer.parseInt(scan.nextLine());
+        int paintThinner = Integer.parseInt(scan.nextLine());
+        int hoursOfWork = Integer.parseInt(scan.nextLine());
 
-      double morePaint = 0.1 * paint;
-      double sum = ((nailon + 2) * 1.5)+(paint + morePaint) * 14.5+(razreditel * 5.0)+0.4;
-      double workPrice = (sum * 0.3) * hours;
-      double priceForEverything = sum + workPrice;
+        double priceForNylon = 1.5 * (nylon + 2);
+        double priceForPaint = 14.5 * (paint + (paint * 0.1));
+        double priceForPaintThinner = 5.0 * paintThinner;
+        double allPrice = 0.4 + priceForNylon + priceForPaint + priceForPaintThinner;
 
-        System.out.println(priceForEverything);
+        double priceForWork = (allPrice * 0.3) * hoursOfWork;
+        
+        double finalPrice = allPrice + priceForWork;
+
+        System.out.println(finalPrice);
+
 
     }
 }
